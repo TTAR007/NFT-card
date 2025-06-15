@@ -23,7 +23,7 @@
 body {
     background-color: var(--main-BG);
     font-family: Outfit, sans-serif;
-    height: 43.125rem;
+    height: 50.125rem;
 
     position: relative;
     display: flex;
@@ -190,7 +190,7 @@ hr {
 
 .attribution {
     position: absolute;
-    bottom: 0.5rem;
+    top: 3rem;
     font-size: 1rem;
     text-align: center;
     color: var(--White);
