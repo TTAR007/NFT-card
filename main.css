@@ -14,5 +14,191 @@
     --w600: 600;
 }
 
-/* .attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); } */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--main-BG);
+    font-family: Outfit, sans-serif;
+    height: 43.125rem;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    background-color: var(--card-BG);
+    margin: 0 auto;
+    width: 90%;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    max-width: 21.8rem;
+    min-width: 10.313rem;
+    animation: alternate;
+    animation-name: card_shadow;
+    animation-duration: 550ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes card_shadow {
+    from {
+        box-shadow: 0 0 0.8rem var(--Eth-price);
+    }
+    to {
+        box-shadow: 0 0 2rem var(--Eth-price);
+    }
+}
+
+img {
+    display: block;
+}
+
+p {
+    color: var(--Blue-p);
+    font-weight: var(--w300);
+    font-size: clamp(1.0625rem, 0.9583rem + 0.4444vw, var(--paragraph-f));
+}
+
+.nft-image-container {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.overlay {
+    background-color: var(--Eth-price);
+    opacity: 0.4;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.view-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.overlay,
+.view-icon {
+    display: none;
+}
+
+.nft-image-container:hover .overlay,
+.nft-image-container:hover .view-icon {
+    display: block;
+    cursor: pointer;
+}
+
+.nft-image {
+    width: 100%;
+}
+
+h1 {
+    color: var(--White);
+    font-size: 1.475rem;
+    margin: 1rem 0;
+    display: inline-block;
+}
+
+h1:hover {
+    color: var(--Eth-price);
+    cursor: pointer;
+}
+
+.description {
+    line-height: 150%;
+}
+
+.price__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.price__box section {
+    display: flex;
+    align-items: center;
+}
+
+.eth-image {
+    max-width: 0.688rem;
+    max-height: 1.125rem;
+}
+
+.price-text {
+    color: var(--Eth-price);
+    font-weight: var(--w600);
+    padding-left: 0.3rem;
+}
+
+.clock-image {
+    max-width: 1.063rem;
+    max-height: 1.063rem;
+}
+
+.day-text {
+    padding-left: 0.3rem;
+    font-weight: var(--w400);
+}
+
+hr {
+    border: solid 0.063rem var(--Blue-line);
+}
+
+.author__box {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.author__box:hover {
+    cursor: pointer;
+}
+
+.author__box:hover .author-name {
+    color: var(--Eth-price);
+}
+
+.author-image {
+    max-width: 2rem;
+    border: 0.125rem solid var(--White);
+    border-radius: 50%;
+}
+
+.creation-text {
+    padding-left: 1rem;
+    font-size: 1rem;
+}
+
+.author-name {
+    color: var(--White);
+    font-weight: var(--w400);
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--White);
+}
+.attribution a { color: hsl(86, 100%, 50%); }
+
+@media (min-width: 37.5rem) {
+    h1 {
+        font-size: 1.35rem;
+    }
+}
