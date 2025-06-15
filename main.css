@@ -23,7 +23,7 @@
 body {
     background-color: var(--main-BG);
     font-family: Outfit, sans-serif;
-    max-height: 43.125rem;
+    height: 43.125rem;
 
     position: relative;
     display: flex;
